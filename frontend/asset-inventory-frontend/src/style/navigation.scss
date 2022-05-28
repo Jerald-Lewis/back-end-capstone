@@ -1,0 +1,93 @@
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: $black;
+    height:80px;
+
+    .left-side {
+        display: flex;
+        align-items: center;
+        width: 100vw;
+
+        .logo {
+            vertical-align: bottom;
+            height: 83px;
+            padding-bottom: 20px;
+            position: fixed;
+            left: 20px;
+            top:-10px;
+            z-index: 1;
+            
+        }
+
+        .date {
+            padding-left: 20px;
+            margin-bottom: 10px;
+            font-size: smaller;
+            position: fixed;
+            left: 20px;
+            top:60px;
+            z-index: 2;
+            color: $blue;
+        }
+        
+        .nav-link-container {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            align-items: center;
+            margin-left: 185px;
+
+            .nav-link-wrapper {
+                display: flex;
+                height: 100%;
+                width: 100%;
+                justify-content: flex-start;
+                align-items: center;
+                color: white;
+
+                
+                .nav-link {
+                    display: flex;
+                    height: 77px;
+                    width: 150px;
+                    justify-content: center;
+                    align-items: center;
+                    color: $text-color;
+                    text-decoration: none;
+                    border-bottom: 3px solid transparent;
+                }
+
+                .nav-link:hover {
+                    border-bottom: 3px solid transparent;
+                    border-image: linear-gradient(to right, gray, $text-color);
+                    border-image-slice: 1;
+                    // // background-image: linear-gradient(to right, #000000 0%, #ffffff 100%);
+                    // // // bottom: -2px;
+                    text-align: center;
+                    justify-content: center;
+                    color: $blue;
+                    
+                    
+                }
+
+                .nav-link-active {
+                    color: $teal;
+                }
+            }
+        }
+    }
+
+    .right-side {
+        display: flex;
+
+        .welcome-message {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
