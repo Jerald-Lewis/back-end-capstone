@@ -21,14 +21,13 @@ export default class Login extends Component {
     }
 
     handleSubmit(event) {
-        axios.post('http://127.0.0.1:5000',
+        axios.post('http://127.0.0.1:5000/user/verify',
         {
-            analyst: {
+            body: {
                 email: this.state.email,
                 password: this.state.password
             }
         },
-        { withCredentials: true }
         ).then(response => {
             console.log("response", response);
         });
