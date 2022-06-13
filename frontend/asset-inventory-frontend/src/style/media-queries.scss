@@ -1,0 +1,43 @@
+@media (max-width: 500px) {
+    .nav-wrapper {
+        height: 430px;
+        flex-direction: column;
+        
+
+        .left-side {
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+
+            .logo-wrapper {
+                display: flex;
+                flex-direction: column;
+            
+                
+            }
+
+            .logo {
+                position: relative;
+                padding:0;
+            }
+
+            .date {
+                position: relative;
+                margin:0;
+                
+            }
+
+            .nav-link-container{
+                grid-template-columns: 1fr;
+                margin:0;
+
+                .nav-link-wrapper {
+                    justify-content: center;
+                    height: 40px;
+                }
+            }
+        }
+    }
+
+    
+}

@@ -1,0 +1,35 @@
+.homepage-content-wrapper{
+    display: flex;
+
+    .homepage-image {
+        display:flex;
+        height: 100vh;
+        width:100%;
+        background-size: cover;
+
+
+        .homepage-content {
+            display: flex;
+            height:100%;
+            width:100vw;
+            justify-content: center;
+            align-items: center;
+            color: red;
+        }
+
+        .homepage-content p {
+            border-style: dotted;
+            border-radius: 5px 5px;
+            border-width: thick;
+            border-color: $blue;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .homepage-content p:hover {
+            border-color: white;
+            color: red;
+        }
+        
+    }
+}

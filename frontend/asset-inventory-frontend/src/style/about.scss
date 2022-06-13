@@ -1,0 +1,19 @@
+.about-wrapper {
+    display:flex;
+
+    .about-content {
+        display:flex;
+    }
+
+    .about-content p {
+        color: black;
+        font-weight: bolder;
+        height: 145px;
+    }
+
+    .about-content p:hover {
+        color:red;
+        transition: all, 600ms ease-in-out;
+    }
+       
+}

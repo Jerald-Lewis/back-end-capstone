@@ -99,14 +99,21 @@ def verify_user():
     email = post_data['email']
     password = post_data['password']
     user = db.session.query(User).filter(User.email == email).first()
-    print(email, password, 'TESTING RIGHT HERE')
     if email is None:
         return jsonify("User NOT verified")
 
     if bcrypt.check_password_hash(user.password, password) == False:
         return jsonify("User NOT verified")
-
+    
     return jsonify("User has been verified!")
+
+@app.route('/user/checklogin', methods=['GET'])
+def check_logged_in():
+    # post_data = request.get_json()
+    # print(post_data)
+    user = db.session.query(User).filter(User.email == email).first()
+    #     # check_logged_in_status =
+    return jsonify("this request works")
 
 class Asset(db.Model):
     __tablename__ = 'asset'

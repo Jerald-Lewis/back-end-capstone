@@ -14,12 +14,12 @@ export default class NavigationComponent extends Component {
         <div className='nav-wrapper'>
             <div className='left-side'>
                 <div className='logo-wrapper'>
-                <a href='https://www.alticeusa.com/' target='blank'>
-                    <img className="logo" src={logo} alt="logo"/>
-                </a>
-                <div className='date'>
-                {moment().format('MMMM Do YYYY')}
-                </div>
+                    <a href='https://www.alticeusa.com/' target='blank'>
+                        <img className="logo" src={logo} alt="logo"/>
+                    </a>
+                    {/* <div className='date'>
+                        {moment().format('MMMM Do YYYY')}
+                    </div> */}
                 </div>
                 <div className='nav-link-container'>
                 <div className='nav-link-wrapper'>
@@ -48,11 +48,11 @@ export default class NavigationComponent extends Component {
                 </div>
             </div>
 
-            <div className='right-side'>
+            {/* <div className='right-side'>
                 <div className='welcome-message'>
-                Welcome user's firName lasName
-                </div>
-            </div>
+                {/* Welcome user's firName lasName */}
+                {/* </div>
+            </div> */}
         </div>
     )
 }

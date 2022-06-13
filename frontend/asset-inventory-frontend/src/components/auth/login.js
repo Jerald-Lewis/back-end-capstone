@@ -7,7 +7,8 @@ export default class Login extends Component {
 
         this.state = {
             email: "",
-            password: ""
+            password: "",
+            errorText: ""
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -16,7 +17,8 @@ export default class Login extends Component {
 
     handleChange(event) {
         this.setState({
-            [event.target.name]: event.target.value
+            [event.target.name]: event.target.value,
+            errorText: ""
         })
     }
 
@@ -28,8 +30,20 @@ export default class Login extends Component {
                 password: this.state.password
             }
         },
+        { withCredentials: true }
         ).then(response => {
-            console.log("response", response);
+            if (response.data === 'User has been verified!'){
+                console.log("You can log in")
+                this.props.handleSuccessfulAuth();
+            } else {
+                this.setState({
+                    errorText: "Email or password is wrong!"
+                })
+            }
+        }).catch(error => {
+            this.setState({
+                errorText: "An error occurred!"
+            })
         });
         
         event.preventDefault();
@@ -38,6 +52,8 @@ export default class Login extends Component {
     return (
         <div>
             <h1>Login to access the knowledge base and your inventory.</h1>
+
+            <div>{this.state.errorText}</div>
 
             <form onSubmit={this.handleSubmit}>
                 <input 
