@@ -1,13 +1,11 @@
 import email
 from flask import Flask, request, jsonify
-# from flask_redis import FlaskRedis
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 from flask_bcrypt import Bcrypt
 import os
-
 from flask_cors import CORS
-from sqlalchemy import ForeignKey
+
 
 app=Flask(__name__)
 bcrypt = Bcrypt(app)
