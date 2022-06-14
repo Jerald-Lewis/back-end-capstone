@@ -9,6 +9,7 @@ flask-redis = "*"
 flask-sqlalchemy = "*"
 flask-marshmallow = "*"
 marshmallow-sqlalchemy = "*"
+gunicorn = "*"
 
 [dev-packages]
 
